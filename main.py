@@ -19,18 +19,20 @@ jurgen.shape("triangle")
 #     t.forward(75)
 #     t.left(90)
 
-def simpleL(sideLength):
-  casper.forward(sideLength)
-  casper.left(45)
-  casper.forward(sideLength)
+def simpleL(turtleName, sideLength):
+  turtleName.forward(sideLength)
+  turtleName.left(45)
+  turtleName.forward(sideLength)
 
-def simpleL2(sideLength):
-  jurgen.forward(sideLength)
-  jurgen.left(45)
-  jurgen.forward(sideLength)  
+# The function above now takes two arguments
+# First: the name of the turtle we want to move
+# Second: the side length for the drawing
+# turtleName and sideLength are now variables
+# that you can use inside simpleL, 
+# BUT NOWHERE ELSE
+simpleL(casper, 50)
+jurgen.goto(70,0)
+simpleL(jurgen, 60)
 
-simpleL(50)
-jurgen.goto(80,0)
-simpleL2(50)
 
 
